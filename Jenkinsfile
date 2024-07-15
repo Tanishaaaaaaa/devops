@@ -25,14 +25,14 @@ pipeline {
         stage('Build') {
             steps {
                 // Build using Maven
-                sh 'mvn clean package'
+                bat 'mvn clean package'
             }
         }
 
         stage('Test') {
             steps {
                 // Run tests using Maven
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
 
@@ -59,7 +59,7 @@ pipeline {
         // stage('Deploy') {
         //     steps {
         //         // Deploy using kubectl
-        //         sh 'kubectl apply -f path/to/deployment.yaml'
+        //         bat 'kubectl apply -f path/to/deployment.yaml'
         //     }
         // }
     }
