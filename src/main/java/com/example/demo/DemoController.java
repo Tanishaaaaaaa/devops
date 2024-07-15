@@ -50,7 +50,7 @@ public class DemoController {
         dietFoods.append("</body></html>");
         return dietFoods.toString();
     }
-	}
+	
 	@PostMapping("/add")
 	EntitlementEntity add(@RequestBody EntitlementEntity entitlementEntity ) {
 		return entitlementRepositery.save(entitlementEntity);
