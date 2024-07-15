@@ -18,7 +18,14 @@ public class DemoController {
 
 	@GetMapping("/sample")
 	String sample() {
-		return "Hello";
+		StringBuilder quizQuestion = new StringBuilder();
+		quizQuestion.append("Question: What is the capital of France?\n");
+		quizQuestion.append("A. London\n");
+		quizQuestion.append("B. Paris\n");
+		quizQuestion.append("C. Berlin\n");
+		quizQuestion.append("D. Madrid\n");
+
+		return quizQuestion.toString();
 	}
 	@PostMapping("/add")
 	EntitlementEntity add(@RequestBody EntitlementEntity entitlementEntity ) {
