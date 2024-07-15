@@ -29,7 +29,7 @@ public class DemoController {
 
         dietFoods.append("<h2>1. Ketogenic Diet Foods</h2>");
         dietFoods.append("<p>Focuses on high-fat, moderate-protein, and low-carb foods.</p>");
-        dietFoods.append("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Ketogenic_diet_avocado_salad.jpg/800px-Ketogenic_diet_avocado_salad.jpg' alt='Ketogenic Diet' width='400'/>");
+        dietFoods.append("<img src='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.britannica.com%2Ftopic%2Fketogenic-diet&psig=AOvVaw0_aVLPwvGD5nBWwg5w_Sc3&ust=1721137828034000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPiw7pmYqYcDFQAAAAAdAAAAABAE' width='400'/>");
 
         dietFoods.append("<h2>2. Mediterranean Diet Foods</h2>");
         dietFoods.append("<p>Emphasizes fruits, vegetables, whole grains, olive oil, fish, and nuts.</p>");
