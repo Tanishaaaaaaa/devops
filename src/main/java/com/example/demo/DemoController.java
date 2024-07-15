@@ -17,32 +17,116 @@ public class DemoController {
 	EntitlementRepositery entitlementRepositery;
 
 	@GetMapping("/sample")
-	String sample() {
-		StringBuilder landmarks = new StringBuilder();
-        landmarks.append("<html><body>");
-        landmarks.append("<h1>Famous Landmarks of India</h1>");
-        landmarks.append("<h2>1. Taj Mahal, Agra</h2>");
-        landmarks.append("<p>A symbol of love and one of the Seven Wonders of the World.</p>");
-        landmarks.append("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal%2C_Agra%2C_India_edit3.jpg/640px-Taj_Mahal%2C_Agra%2C_India_edit3.jpg' alt='Taj Mahal' width='300'/><br><br>");
+	 return """
+                <html>
+                <body>
+                    <h1>Simple Java Quiz</h1>
+                    <form id="quizForm">
+                        <div>
+                            <h3>1. What is the size of int in Java?</h3>
+                            <input type="radio" name="q1" value="A"> 16 bits<br>
+                            <input type="radio" name="q1" value="B"> 32 bits<br>
+                            <input type="radio" name="q1" value="C"> 64 bits<br>
+                            <input type="radio" name="q1" value="D"> Depends on the platform<br>
+                        </div>
 
-        landmarks.append("<h2>2. Qutub Minar, Delhi</h2>");
-        landmarks.append("<p>A UNESCO World Heritage Site and the tallest brick minaret in the world.</p>");
-        landmarks.append("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Qutb_Minar%2C_Delhi%2C_India.jpg/640px-Qutb_Minar%2C_Delhi%2C_India.jpg' alt='Qutub Minar' width='300'/><br><br>");
+                        <div>
+                            <h3>2. Which of the following is not a Java keyword?</h3>
+                            <input type="radio" name="q2" value="A"> static<br>
+                            <input type="radio" name="q2" value="B"> Boolean<br>
+                            <input type="radio" name="q2" value="C"> void<br>
+                            <input type="radio" name="q2" value="D"> private<br>
+                        </div>
 
-        landmarks.append("<h2>3. Gateway of India, Mumbai</h2>");
-        landmarks.append("<p>A grand arch overlooking the Arabian Sea.</p>");
-        landmarks.append("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Gateway_of_India%2C_Mumbai.jpg/640px-Gateway_of_India%2C_Mumbai.jpg' alt='Gateway of India' width='300'/><br><br>");
+                        <div>
+                            <h3>3. What is the default value of a boolean variable?</h3>
+                            <input type="radio" name="q3" value="A"> true<br>
+                            <input type="radio" name="q3" value="B"> false<br>
+                            <input type="radio" name="q3" value="C"> null<br>
+                            <input type="radio" name="q3" value="D"> undefined<br>
+                        </div>
 
-        landmarks.append("<h2>4. Red Fort, Delhi</h2>");
-        landmarks.append("<p>A historic fort and a symbol of India's rich past.</p>");
-        landmarks.append("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Red_Fort_in_Delhi_03-2016_img3.jpg/640px-Red_Fort_in_Delhi_03-2016_img3.jpg' alt='Red Fort' width='300'/><br><br>");
+                        <div>
+                            <h3>4. What does the expression float a = 35 / 0 return?</h3>
+                            <input type="radio" name="q4" value="A"> 0<br>
+                            <input type="radio" name="q4" value="B"> Infinity<br>
+                            <input type="radio" name="q4" value="C"> NaN<br>
+                            <input type="radio" name="q4" value="D"> throws an exception<br>
+                        </div>
 
-        landmarks.append("<h2>5. Hawa Mahal, Jaipur</h2>");
-        landmarks.append("<p>Also known as the Palace of Winds, with its unique five-storey exterior.</p>");
-        landmarks.append("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Hawa_Mahal_2011.jpg/640px-Hawa_Mahal_2011.jpg' alt='Hawa Mahal' width='300'/><br><br>");
+                        <div>
+                            <h3>5. Which of the following is a marker interface?</h3>
+                            <input type="radio" name="q5" value="A"> Runnable<br>
+                            <input type="radio" name="q5" value="B"> Serializable<br>
+                            <input type="radio" name="q5" value="C"> Comparable<br>
+                            <input type="radio" name="q5" value="D"> Cloneable<br>
+                        </div>
 
-        landmarks.append("</body></html>");
-        return landmarks.toString();
+                        <div>
+                            <h3>6. Which keyword is used to prevent inheritance in Java?</h3>
+                            <input type="radio" name="q6" value="A"> super<br>
+                            <input type="radio" name="q6" value="B"> static<br>
+                            <input type="radio" name="q6" value="C"> final<br>
+                            <input type="radio" name="q6" value="D"> this<br>
+                        </div>
+
+                        <div>
+                            <h3>7. Which method must be implemented by all threads?</h3>
+                            <input type="radio" name="q7" value="A"> start()<br>
+                            <input type="radio" name="q7" value="B"> run()<br>
+                            <input type="radio" name="q7" value="C"> stop()<br>
+                            <input type="radio" name="q7" value="D"> main()<br>
+                        </div>
+
+                        <div>
+                            <h3>8. What is the size of long variable?</h3>
+                            <input type="radio" name="q8" value="A"> 8 bits<br>
+                            <input type="radio" name="q8" value="B"> 16 bits<br>
+                            <input type="radio" name="q8" value="C"> 32 bits<br>
+                            <input type="radio" name="q8" value="D"> 64 bits<br>
+                        </div>
+
+                        <div>
+                            <h3>9. Which of the following is a reserved keyword in Java?</h3>
+                            <input type="radio" name="q9" value="A"> array<br>
+                            <input type="radio" name="q9" value="B"> goto<br>
+                            <input type="radio" name="q9" value="C"> null<br>
+                            <input type="radio" name="q9" value="D"> boolean<br>
+                        </div>
+
+                        <div>
+                            <h3>10. Which exception is thrown when a null object is accessed?</h3>
+                            <input type="radio" name="q10" value="A"> NullPointerException<br>
+                            <input type="radio" name="q10" value="B"> ArithmeticException<br>
+                            <input type="radio" name="q10" value="C"> ArrayIndexOutOfBoundsException<br>
+                            <input type="radio" name="q10" value="D"> ClassNotFoundException<br>
+                        </div>
+
+                        <button type="button" onclick="checkAnswers()">Submit</button>
+                    </form>
+
+                    <script>
+                        function checkAnswers() {
+                            var correctAnswers = ['B', 'B', 'B', 'B', 'B', 'C', 'B', 'D', 'B', 'A'];
+                            var form = document.getElementById('quizForm');
+                            var answers = form.elements;
+                            var score = 0;
+
+                            for (var i = 0; i < correctAnswers.length; i++) {
+                                var questionName = 'q' + (i + 1);
+                                var userAnswer = answers[questionName].value;
+
+                                if (userAnswer === correctAnswers[i]) {
+                                    score++;
+                                }
+                            }
+
+                            alert('Your score is: ' + score + '/' + correctAnswers.length);
+                        }
+                    </script>
+                </body>
+                </html>
+                """;
 	}
 	@PostMapping("/add")
 	EntitlementEntity add(@RequestBody EntitlementEntity entitlementEntity ) {
