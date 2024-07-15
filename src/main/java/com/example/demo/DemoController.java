@@ -17,100 +17,39 @@ public class DemoController {
 	EntitlementRepositery entitlementRepositery;
 
 	@GetMapping("/sample")
-	         return "<html>" +
-                "<body>" +
-                "<h1>Simple Java Quiz</h1>" +
-                "<form id='quizForm'>" +
-                "<div>" +
-                "<h3>1. What is the size of int in Java?</h3>" +
-                "<input type='radio' name='q1' value='A'> 16 bits<br>" +
-                "<input type='radio' name='q1' value='B'> 32 bits<br>" +
-                "<input type='radio' name='q1' value='C'> 64 bits<br>" +
-                "<input type='radio' name='q1' value='D'> Depends on the platform<br>" +
-                "</div>" +
-                "<div>" +
-                "<h3>2. Which of the following is not a Java keyword?</h3>" +
-                "<input type='radio' name='q2' value='A'> static<br>" +
-                "<input type='radio' name='q2' value='B'> Boolean<br>" +
-                "<input type='radio' name='q2' value='C'> void<br>" +
-                "<input type='radio' name='q2' value='D'> private<br>" +
-                "</div>" +
-                "<div>" +
-                "<h3>3. What is the default value of a boolean variable?</h3>" +
-                "<input type='radio' name='q3' value='A'> true<br>" +
-                "<input type='radio' name='q3' value='B'> false<br>" +
-                "<input type='radio' name='q3' value='C'> null<br>" +
-                "<input type='radio' name='q3' value='D'> undefined<br>" +
-                "</div>" +
-                "<div>" +
-                "<h3>4. What does the expression float a = 35 / 0 return?</h3>" +
-                "<input type='radio' name='q4' value='A'> 0<br>" +
-                "<input type='radio' name='q4' value='B'> Infinity<br>" +
-                "<input type='radio' name='q4' value='C'> NaN<br>" +
-                "<input type='radio' name='q4' value='D'> throws an exception<br>" +
-                "</div>" +
-                "<div>" +
-                "<h3>5. Which of the following is a marker interface?</h3>" +
-                "<input type='radio' name='q5' value='A'> Runnable<br>" +
-                "<input type='radio' name='q5' value='B'> Serializable<br>" +
-                "<input type='radio' name='q5' value='C'> Comparable<br>" +
-                "<input type='radio' name='q5' value='D'> Cloneable<br>" +
-                "</div>" +
-                "<div>" +
-                "<h3>6. Which keyword is used to prevent inheritance in Java?</h3>" +
-                "<input type='radio' name='q6' value='A'> super<br>" +
-                "<input type='radio' name='q6' value='B'> static<br>" +
-                "<input type='radio' name='q6' value='C'> final<br>" +
-                "<input type='radio' name='q6' value='D'> this<br>" +
-                "</div>" +
-                "<div>" +
-                "<h3>7. Which method must be implemented by all threads?</h3>" +
-                "<input type='radio' name='q7' value='A'> start()<br>" +
-                "<input type='radio' name='q7' value='B'> run()<br>" +
-                "<input type='radio' name='q7' value='C'> stop()<br>" +
-                "<input type='radio' name='q7' value='D'> main()<br>" +
-                "</div>" +
-                "<div>" +
-                "<h3>8. What is the size of long variable?</h3>" +
-                "<input type='radio' name='q8' value='A'> 8 bits<br>" +
-                "<input type='radio' name='q8' value='B'> 16 bits<br>" +
-                "<input type='radio' name='q8' value='C'> 32 bits<br>" +
-                "<input type='radio' name='q8' value='D'> 64 bits<br>" +
-                "</div>" +
-                "<div>" +
-                "<h3>9. Which of the following is a reserved keyword in Java?</h3>" +
-                "<input type='radio' name='q9' value='A'> array<br>" +
-                "<input type='radio' name='q9' value='B'> goto<br>" +
-                "<input type='radio' name='q9' value='C'> null<br>" +
-                "<input type='radio' name='q9' value='D'> boolean<br>" +
-                "</div>" +
-                "<div>" +
-                "<h3>10. Which exception is thrown when a null object is accessed?</h3>" +
-                "<input type='radio' name='q10' value='A'> NullPointerException<br>" +
-                "<input type='radio' name='q10' value='B'> ArithmeticException<br>" +
-                "<input type='radio' name='q10' value='C'> ArrayIndexOutOfBoundsException<br>" +
-                "<input type='radio' name='q10' value='D'> ClassNotFoundException<br>" +
-                "</div>" +
-                "<button type='button' onclick='checkAnswers()'>Submit</button>" +
-                "</form>" +
-                "<script>" +
-                "function checkAnswers() {" +
-                "    var correctAnswers = ['B', 'B', 'B', 'B', 'B', 'C', 'B', 'D', 'B', 'A'];" +
-                "    var form = document.getElementById('quizForm');" +
-                "    var answers = form.elements;" +
-                "    var score = 0;" +
-                "    for (var i = 0; i < correctAnswers.length; i++) {" +
-                "        var questionName = 'q' + (i + 1);" +
-                "        var userAnswer = answers[questionName].value;" +
-                "        if (userAnswer === correctAnswers[i]) {" +
-                "            score++;" +
-                "        }" +
-                "    }" +
-                "    alert('Your score is: ' + score + '/' + correctAnswers.length);" +
-                "}" +
-                "</script>" +
-                "</body>" +
-                "</html>";
+	String sample() {
+        StringBuilder dietFoods = new StringBuilder();
+        dietFoods.append("<html><head><style>");
+        dietFoods.append("body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }");
+        dietFoods.append("h1, h2, h3 { color: #333; }");
+        dietFoods.append("p { margin-bottom: 10px; }");
+        dietFoods.append("img { display: block; margin: 10px auto; }");
+        dietFoods.append("</style></head><body>");
+        dietFoods.append("<h1 style='text-align: center;'>Different Kinds of Diet Foods</h1>");
+
+        dietFoods.append("<h2>1. Ketogenic Diet Foods</h2>");
+        dietFoods.append("<p>Focuses on high-fat, moderate-protein, and low-carb foods.</p>");
+        dietFoods.append("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Ketogenic_diet_avocado_salad.jpg/800px-Ketogenic_diet_avocado_salad.jpg' alt='Ketogenic Diet' width='400'/>");
+
+        dietFoods.append("<h2>2. Mediterranean Diet Foods</h2>");
+        dietFoods.append("<p>Emphasizes fruits, vegetables, whole grains, olive oil, fish, and nuts.</p>");
+        dietFoods.append("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Mediterranean_food.jpg/800px-Mediterranean_food.jpg' alt='Mediterranean Diet' width='400'/>");
+
+        dietFoods.append("<h2>3. Paleo Diet Foods</h2>");
+        dietFoods.append("<p>Based on foods presumed to have been eaten by early humans, including lean meats, fish, fruits, and vegetables.</p>");
+        dietFoods.append("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Paleo_meal.jpg/800px-Paleo_meal.jpg' alt='Paleo Diet' width='400'/>");
+
+        dietFoods.append("<h2>4. Vegan Diet Foods</h2>");
+        dietFoods.append("<p>Excludes all animal products, focusing on plant-based foods like fruits, vegetables, grains, and nuts.</p>");
+        dietFoods.append("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Vegan_lunch_with_chickpea_patties.jpg/800px-Vegan_lunch_with_chickpea_patties.jpg' alt='Vegan Diet' width='400'/>");
+
+        dietFoods.append("<h2>5. Gluten-Free Diet Foods</h2>");
+        dietFoods.append("<p>Avoids foods containing gluten, found in wheat, barley, and rye; includes gluten-free grains, fruits, vegetables, and proteins.</p>");
+        dietFoods.append("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Gluten-Free_Pancakes_with_Berries.jpg/800px-Gluten-Free_Pancakes_with_Berries.jpg' alt='Gluten-Free Diet' width='400'/>");
+
+        dietFoods.append("</body></html>");
+        return dietFoods.toString();
+    }
 	}
 	@PostMapping("/add")
 	EntitlementEntity add(@RequestBody EntitlementEntity entitlementEntity ) {
