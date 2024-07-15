@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "demokubechat.fullname" . }}
+  name: {{ include "kubechat.fullname" . }}
   labels:
-    {{- include "demokubechat.labels" . | nindent 4 }}
+    {{- include "kubechat.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "demokubechat.fullname" . }}
+    name: {{ include "kubechat.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:

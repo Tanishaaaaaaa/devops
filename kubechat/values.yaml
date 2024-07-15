@@ -1,4 +1,4 @@
-# Default values for demokubechat.
+# Default values for kubechat.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -70,15 +70,6 @@ resources: {}
   # requests:
   #   cpu: 100m
   #   memory: 128Mi
-
-#livenessProbe:
-#  httpGet:
-#   path: /
-#  port: http
-#readinessProbe:
-#  httpGet:
-#    path: /
-#    port: http
 
 autoscaling:
   enabled: false
