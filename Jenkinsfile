@@ -49,7 +49,7 @@ pipeline {
             steps {
                 // Push Docker image to Docker Hub
                 script {
-                    docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-credentials-id') {
+                    docker.withRegistry('https://index.docker.io/v1/', '42ed6bcb-c816-43ee-9780-60b472c2f518') {
                         docker.image("tanishaaa31/java-quiz-app:latest").push()
                     }
                 }
